@@ -1,0 +1,142 @@
+/* تغيير الخلفية بسلاسة */
+@keyframes changeBackground {
+    0% { background: #ff5733; }
+    25% { background: #33ff57; }
+    50% { background: #3357ff; }
+    75% { background: #ff33a8; }
+    100% { background: #ff5733; }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+    animation: changeBackground 10s infinite;
+}
+
+/* دائرة التحميل */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* العنوان والشريط العلوي */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* الأقسام */
+section {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 80%;
+}
+
+/* الأزرار */
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* تصميم إكس أو */
+#tic-tac-toe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+#tic-tac-toe-board div {
+    width: 100px;
+    height: 100px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#tic-tac-toe-board div:hover {
+    background-color: #555;
+}
+
+/* تصميم لعبة الذاكرة */
+#memory-game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+#memory-game-board div {
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#memory-game-board div.flipped {
+    background-color: #fff;
+    color: #444;
+}
+
+#memory-game-board div:hover {
+    background-color: #555;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Games Online</title>
+    <link rel="stylesheet" href="styles7.css">
+</head>
+<body>
+    <!-- دائرة التحميل -->
+    <div id="loading-spinner" class="loading-spinner"></div>
+
+    <header>
+        <h1>🎮 Mini Games Online 🎮</h1>
+        <nav>
+            <ul>
+                <li><a href="#xo">❌⭕ إكس أو</a></li>
+                <li><a href="#memory">🃏 لعبة الذاكرة</a></li>
+                <li><a href="#guess">🔢 خمن الرقم</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 🔴 إكس أو -->
+        <section id="xo">
+            <h2>❌⭕ إكس أو</h2>
+            <button onclick="startTicTacToe('easy')">سهل</button>
+            <button onclick="startTicTacToe('medium')">متوسط</button>
+            <button onclick="startTicTacToe('hard')">صعب</button>
+            <div id="tic-tac-toe-board"></div>
+            <button id="restart-tic-tac-toe" onclick="startTicTacToe()">إعادة اللعب</button>
+        </section>
+
+        <!-- 🟡 لعبة الذاكرة -->
+        <section id="memory">
+            <h2>🃏 لعبة الذاكرة</h2>
+            <button onclick="startMemoryGame()">ابدأ اللعب</button>
+            <div id="memory-game-board"></div>
+            <button onclick="startMemoryGame()">إعادة اللعب</button>
+        </section>
+
+        <!-- 🔵 خمن الرقم -->
+        <section id="guess">
+            <h2>🔢 خمن الرقم</h2>
+            <input type="number" id="guess-input" placeholder="ادخل رقم بين 1 و 100">
+            <button onclick="checkGuess()">تحقق</button>
+            <p id="guess-result"></p>
+            <button onclick="resetGuess()">إعادة اللعب</button>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
